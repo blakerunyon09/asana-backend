@@ -9,7 +9,7 @@ class CardsController < ApplicationController
   end
   def create
     @card = Card.create(name: params[:name], description: params[:description], user_id: params[:user_id])
-    render json: @card, status: :accepted
+    redirect_to "https://gallant-poitras-e8ca8f.netlify.app"
   end
   def update
     @card = Card.find(params[:id])
