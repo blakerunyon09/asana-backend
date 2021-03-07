@@ -19,6 +19,6 @@ class CardsController < ApplicationController
   def destroy
     @card = Card.find(params[:id])
     @card.destroy
-    render json: @card, status: :no_content
+    redirect_to "https://gallant-poitras-e8ca8f.netlify.app"
   end
 end
